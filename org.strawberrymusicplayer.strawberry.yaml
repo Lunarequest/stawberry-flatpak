@@ -39,7 +39,7 @@ modules:
     buildsystem: simple
     build-commands:
       - ./bootstrap.sh
-      - ./b2 
+      - ./b2 link=shared runtime-link=shared
       - ./b2 headers
       - ./b2 install --prefix=/app
     sources:
