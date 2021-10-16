@@ -19,8 +19,19 @@ finish-args:
   - --socket=fallback-x11
   - --socket=wayland
   - --filesystem=xdg-music
-  - --socket=pulseaudio
-  - --device=dri
+  - --share=network
+  - --filesystem=/mnt
+  - --filesystem=/media
+  - --filesystem=/run/media
+  - --system-talk-name=org.freedesktop.Avahi
+  - --talk-name=org.freedesktop.Notifications
+  - --system-talk-name=org.freedesktop.UDisks2
+  - --talk-name=org.gnome.SettingsDaemon.MediaKeys
+  - --talk-name=org.wiimotedev.deviceEvents
+  - --talk-name=org.mpris.MediaPlayer2.Player
+  - --own-name=org.mpris.MediaPlayer2.clementine
+  - --talk-name=org.kde.StatusNotifierWatcher
+  - --own-name=org.kde.StatusNotifierItem-2-2
 modules:
   - name: gnutls
     config-opts:
