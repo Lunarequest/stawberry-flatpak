@@ -19,6 +19,7 @@ finish-args:
   - --socket=fallback-x11
   - --socket=wayland
   - --filesystem=xdg-music
+  - --socket=pulseaudio
   - --device=dri
 modules:
   - name: gnutls
