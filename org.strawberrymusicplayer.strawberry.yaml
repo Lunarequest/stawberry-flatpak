@@ -85,22 +85,12 @@ modules:
       - type: archive
         url: https://github.com/Martchus/cpp-utilities/archive/refs/tags/v5.11.2.tar.gz
         sha256: 4ff8d2a8844c754d1c64f151e91d8b13365a8f1e4a68b49e314d110881479f1a
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/Martchus/cpp-utilitiesreleases/latest
-          version-query: .tag_name |sub("v";"")
-          url-query: .tarball_url
   - name: tagparser
     buildsystem: cmake
     sources:
       - type: archive
         url: https://github.com/Martchus/tagparser/archive/refs/tags/v10.3.0.tar.gz
         sha256: 7ec68d39b7a3a7e3d4ca2e991e2eea5158c91d2afb6c5607b49a27a5c81930d1
-        x-checker-data:
-          type: json
-          url: https://api.github.com/Martchus/tagparser/cpp-utilitiesreleases/latest
-          version-query: .tag_name |sub("v";"")
-          url-query: .tarball_url
   - name: taglib
     buildsystem: cmake
     cleanup:
@@ -109,14 +99,6 @@ modules:
       - type: archive
         url: https://github.com/taglib/taglib/releases/download/v1.12/taglib-1.12.tar.gz
         sha256: 7fccd07669a523b07a15bd24c8da1bbb92206cb19e9366c3692af3d79253b703
-  - name: libcdio
-    cleanup:
-      - /bin/cd*
-      - /bin/iso*
-    sources:
-      - type: archive
-        url: https://ftp.gnu.org/gnu/libcdio/libcdio-2.1.0.tar.bz2
-        sha256: 8550e9589dbd594bfac93b81ecf129b1dc9d0d51e90f9696f1b2f9b2af32712b
   - name: strawberry
     buildsystem: cmake
     sources:
